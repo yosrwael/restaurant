@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+a {
+  text-decoration: none;
+  color: #8e7553;
+}
+
+nav {
+  background-color: #0f172b;
+  position: sticky;
+}
+nav .navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+#logo {
+  margin-left: 80px;
+  margin-top: 25px;
+  width: 270px;
+  height: 25px;
+}
+nav ul li {
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+nav ul li a {
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  display: inline-block;
+}
+
+header {
+  background-image: url("imgs/slide_1.jpg");
+  background-size: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+header .slider h1 {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 70px;
+  font-weight: 900;
+  margin-top: 150px;
+  margin-left: 80px;
+}
+header .slider p {
+  color: white;
+  font-family: "Libertinus Serif Display", sans-serif;
+  font-size: 25px;
+  margin-left: 80px;
+}
+
+.content {
+  height: 400px;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+.content h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  margin-top: 60px;
+  color: #000000;
+}
+.content hr {
+  width: 65px;
+  border: 2px solid #a78e6d;
+  margin: 0 auto 20px;
+}
+.content p {
+  font-size: 20px;
+  color: #000000;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.menu {
+  text-align: center;
+  padding: 20px;
+  background-color: #e4e4e4;
+}
+.menu h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  margin-top: 60px;
+  color: #000000;
+}
+.menu hr {
+  width: 65px;
+  border: 2px solid #a78e6d;
+  margin: 0 auto 20px;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+.buttons button {
+  background-color: #8e7553;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.buttons button:hover {
+  opacity: 0.8;
+}
+
