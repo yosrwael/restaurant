@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,16 +19,18 @@
     />
   </head>
   <body>
-    <header>
+    <header id="main">
       <nav>
         <div class="navbar">
-          <img src="imgs/logo.png" alt="logo" srcset="" id="logo" />
+          <div id="logo">Restaurant's</div>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Categories</a></li>
-            <li><a href="">Cards</a></li>
+            <li><a href="#main">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menuu">Menu</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li>
+              <a href="">Cart <span id="cartCount">0</span></a>
+            </li>
             <li>
               <a href="contact.html">Contact Us <span id="count"></span></a>
             </li>
@@ -32,6 +40,7 @@
 
       <div class="slider">
         <h1>Enjoy Our <br />Delicious Meal</h1>
+        <br />
         <p>
           <i>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
@@ -47,29 +56,238 @@
       </div>
     </header>
 
-    <div class="content">
-      <h1> <i>About Us</i></h1>
+    <div class="content" id="about">
+      <h1><i>About Us</i></h1>
       <hr />
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipiscing elit. <br> Dicta debitis
-        eligendi aliquam quibusdam? Ex suscipit sed  <br> magnam odio! Mollitia, iure!
-        Sequi quo rem tempora alias <br> delectus itaque eos fugit dolor!
+        Lorem ipsum dolor, sit amet consectetur adipiscing elit. <br />
+        Dicta debitis eligendi aliquam quibusdam? Ex suscipit sed <br />
+        magnam odio! Mollitia, iure! Sequi quo rem tempora alias <br />
+        delectus itaque eos fugit dolor!
       </p>
     </div>
 
-    <div class="menu">
-        <h1> <i>Our Menu</i></h1>
-        <hr>
+    <div class="menu" id="menuu">
+      <h1><i>Our Menu</i></h1>
+      <hr />
 
-        <div class="buttons">
-            <button class="allbtn">All</button>
-            <button class="steakbtn">Steak</button>
-            <button class="pastasbtn">Pasta</button>
-            <button class="pizzasbtn">Pizza</button>
-            <button class="drinksbtn">Drinks</button>
-        </div>
-    
+      <div class="buttons">
+        <button onclick="returnItems('allItems')" class="allbtn">All</button>
+        <button onclick="returnItems('steak')" class="steakbtn">Steak</button>
+        <button onclick="returnItems('pasta')" class="pastasbtn">Pasta</button>
+        <button onclick="returnItems('pizza')" class="pizzasbtn">Pizza</button>
+        <button onclick="returnItems('drinks')" class="drinksbtn">
+          Drinks
+        </button>
+      </div>
+
+      <div class="items">
+        <div class="card">
+          <img src="imgs/pasta1.jpg" alt="Pasta" />
+          <div class="card-body">
+            <h5 class="card-title">Pasta 20$</h5>
+            <a href="#" class="btn" onclick="addToCart('Pasta', 20)"
+              >Add To Cart</a
+            >
+          </div>
         </div>
 
+        <div class="card">
+          <img src="imgs/pasta2.jpg" alt="Pasta" />
+          <div class="card-body">
+            <h5 class="card-title">Pasta 25$</h5>
+            <a href="#" class="btn" onclick="addToCart('Pasta', 25)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/pasta5.jpg" alt="Pasta" />
+          <div class="card-body">
+            <h5 class="card-title">Pasta 27$</h5>
+            <a href="#" class="btn" onclick="addToCart('Pasta', 27)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/pasta6.jpg" alt="Pasta" />
+          <div class="card-body">
+            <h5 class="card-title">Pasta 22$</h5>
+            <a href="#" class="btn" onclick="addToCart('Pasta', 22)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/pizza-1.jpg" alt="Pizza" />
+          <div class="card-body">
+            <h5 class="card-title">Pizza 25$</h5>
+            <a href="#" class="btn" onclick="addToCart('Pizza', 25)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/pizza-2.jpg" alt="Pizza" />
+          <div class="card-body">
+            <h5 class="card-title">Pizza 28$</h5>
+            <a href="#" class="btn" onclick="addToCart('Pizza', 28)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/pizza-7.jpg" alt="Pizza" />
+          <div class="card-body">
+            <h5 class="card-title">Pizza 19$</h5>
+            <a href="#" class="btn" onclick="addToCart('Pizza', 19)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/pizza8.jpg" alt="Pizza" />
+          <div class="card-body">
+            <h5 class="card-title">Pizza 17$</h5>
+            <a href="#" class="btn" onclick="addToCart('Pizza', 17)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/res_img_4.jpg" alt="Steak" />
+          <div class="card-body">
+            <h5 class="card-title">Steak 15$</h5>
+            <a href="#" class="btn" onclick="addToCart('Steak', 15)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/res_img_8.jpg" alt="Steak" />
+          <div class="card-body">
+            <h5 class="card-title">Steak 20$</h5>
+            <a href="#" class="btn" onclick="addToCart('Steak', 20)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/blog-bg.jpg" alt="Steak" />
+          <div class="card-body">
+            <h5 class="card-title">Steak 25$</h5>
+            <a href="#" class="btn" onclick="addToCart('Steak', 25)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/blog-img-3.jpg" alt="Steak" />
+          <div class="card-body">
+            <h5 class="card-title">Steak 32$</h5>
+            <a href="#" class="btn" onclick="addToCart('Steak', 32)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/blog-img-4.jpg" alt="Steak" />
+          <div class="card-body">
+            <h5 class="card-title">Steak 30$</h5>
+            <a href="#" class="btn" onclick="addToCart('Steak', 30)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/res_img_5.jpg" alt="Drink" />
+          <div class="card-body">
+            <h5 class="card-title">Drink 15$</h5>
+            <a href="#" class="btn" onclick="addToCart('Drink', 15)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/res_img_6.jpg" alt="Drink" />
+          <div class="card-body">
+            <h5 class="card-title">Drink 10$</h5>
+            <a href="#" class="btn" onclick="addToCart('Drink', 10)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="imgs/res_img_7.jpg" alt="Drink" />
+          <div class="card-body">
+            <h5 class="card-title">Drink 7$</h5>
+            <a href="#" class="btn" onclick="addToCart('Drink', 7)"
+              >Add To Cart</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="back"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="sec1">
+          <h2>Restaurant</h2>
+          <ul>
+            <li><a href="">> About us</a></li>
+            <li><a href="">> Contact us</a></li>
+            <li><a href="">> Rservation</a></li>
+            <li><a href="">> Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="sec2">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="">> Cooked</a></li>
+            <li><a href="">> Deliver</a></li>
+            <li><a href="">> Quality Food</a></li>
+            <li><a href="">> Drinkes</a></li>
+          </ul>
+        </div>
+        <div class="sec3">
+          <h2>Contact us</h2>
+          <ul>
+            <li>> 123 Street,Benha,Egypt</li>
+            <li><a href="">> +20 109 625 4594</a></li>
+            <li><a href="">> custom@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="sec4">
+          <h2>Openning</h2>
+          <ul>
+            <li>Monday - Saturday</li>
+            <li>08AM - 12AM</li>
+            <li>Sunday</li>
+            <li>12PM - 08PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Copyright ©2022 All rights reserved | DESIGN BY <a href="#">ITI</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

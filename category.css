@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Merriweather", serif;
+}
+a {
+  text-decoration: none;
+  color: #8e7553;
+}
+
+nav {
+  background-color: #0f172b;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 1000000;
+}
+nav .navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+#logo {
+  color: #8e7553;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 70px;
+  margin-top: 25px;
+}
+nav ul li {
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+nav ul li a {
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.cards-container {
+  padding: 100px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 400px;
+  margin-bottom: 30px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(14, 23, 43, 0.9);
+  color: white;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-text p {
+  margin: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.card:hover .hover-text {
+  transform: translateY(0);
+}
+
+
+.footer {
+  background-color: #0f172b;
+  color: #fff;
+  padding: 50px 0 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #8e7553;
+  font-style: italic;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer ul li a:hover {
+  color: #8e7553;
+}
+
+.footer .sec3 ul li {
+  line-height: 1.8;
+}
+
+.footer .sec4 ul li {
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  padding-top: 15px;
+}
+
+.footer-bottom a {
+  color: #8e7553;
+  text-decoration: none;
+  font-weight: bold;
+}

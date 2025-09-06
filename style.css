@@ -16,7 +16,10 @@ a {
 
 nav {
   background-color: #0f172b;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 1000000;
 }
 nav .navbar {
   display: flex;
@@ -25,10 +28,10 @@ nav .navbar {
 }
 
 #logo {
-  margin-left: 80px;
-  margin-top: 25px;
-  width: 270px;
-  height: 25px;
+    color: #8e7553;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 100px;
 }
 nav ul li {
   display: inline-block;
@@ -47,19 +50,20 @@ nav ul li a {
 header {
   background-image: url("imgs/slide_1.jpg");
   background-size: cover;
-
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 header .slider h1 {
   color: white;
   font-family: "Nunito", sans-serif;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 900;
-  margin-top: 150px;
+  margin-top: 250px;
   margin-left: 80px;
 }
 header .slider p {
@@ -122,8 +126,132 @@ header .slider p {
   margin: 0 5px;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 18px;
 }
 .buttons button:hover {
   opacity: 0.8;
 }
 
+.items {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.card {
+  flex: 0 0 calc(25% - 20px);
+  background: #c8b08f;
+  border-radius: 12px;
+  box-shadow: 0 7px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.2s;
+  margin-top: 30px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #0f172b;
+}
+
+.btn {
+  display: inline-block;
+  background: #0f172b;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background-color: #0f172b66;
+}
+
+.back {
+  background-color: #e4e4e4;
+  height: 80px;
+}
+.footer {
+  background-color: #0f172b;
+  color: #fff;
+  padding: 50px 0 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #8e7553;
+  font-style: italic;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer ul li a:hover {
+  color: #8e7553;
+}
+
+.footer .sec3 ul li {
+  line-height: 1.8;
+}
+
+.footer .sec4 ul li {
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  padding-top: 15px;
+}
+
+.footer-bottom a {
+  color: #8e7553;
+  text-decoration: none;
+  font-weight: bold;
+}
